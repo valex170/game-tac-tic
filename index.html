@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>«Выйграй-Еркежанку»</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./audio/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="body-element" id="content" style="display: none;">
+            <h1>Игра «Выйграй-Еркежанку😜»</h1>
+            <div id="game-board">
+                <div class="game-item" data-ceil="1"></div>
+                <div class="game-item" data-ceil="2"></div>
+                <div class="game-item" data-ceil="3"></div>
+                <div class="game-item" data-ceil="4"></div>
+                <div class="game-item" data-ceil="5"></div>
+                <div class="game-item" data-ceil="6"></div>
+                <div class="game-item" data-ceil="7"></div>
+                <div class="game-item" data-ceil="8"></div>
+                <div class="game-item" data-ceil="9"></div>
+            </div>
+            <div id="message">Первым пошел</div> 
+            <div id="scoreboard">
+                <p>Победы Alexey : <span id="score-x">0</span></p>
+                <p>Победы Erkezhan : <span id="score-o">0</span></p>
+                <p>Ничьи: <span id="score-draw">0</span></p>
+            </div>
+            <button id="reset-game">Сбросить игру</button>
+            
+        </div>
+        <div id="loading-status" style="display: none;">😜😜😜Загрузка... Пожалуйста, подождите.😜😜😜</div> 
+    
+    
+    <button id="start-game">Начать игру</button> <!-- Кнопка для начала игры -->
+    
+    
+    
+    </div>
+
+    <audio id="win-x-sound" src="audio/win.m4a" preload="auto"></audio>
+    <audio id="win-o-sound" src="audio/lose.m4a" preload="auto"></audio>
+    <audio id="draw-sound" src="audio/draw.m4a" preload="auto"></audio>
+
+    <script src="script.js"></script>
+    <script>           
+        var     startButton = document.getElementById("start-game");
+                loadingStatus = document.getElementById("loading-status"), // Элемент для статуса загрузки
+                // Обработчик клика для кнопки "Начать игру"
+                startButton.addEventListener("click", function () {
+                    message.innerText = "Загрузка...";
+                    startButton.style.display = "none"; // Скрываем кнопку "Начать игру"
+                    loadingStatus.style.display = "block"; // Показываем статус загрузки
+                    setTimeout(function () {
+                        document.getElementById("content").style.display = "block"; // Показываем контент
+                        reset.style.display = "inline"; // Показываем кнопку сброса
+                        loadingStatus.style.display = "none"; // Скрываем статус загрузки
+                        message.innerText = ""; // Очищаем сообщение
+                    }, 3000); // Задержка 3 секунды
+                });
+    </script>
+</body>
+
+</html>

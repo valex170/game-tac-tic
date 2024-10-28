@@ -1,0 +1,39 @@
+@media screen and (min-device-width: 375px) and (max-device-width: 768px) {
+    .body-element {
+      width: 990px;
+      height: 500px;
+      margin: auto;
+    }
+    body h1 {
+      font-size: 70px;
+    }
+    #game-board {
+      grid-template-columns: repeat(3, 300px);
+    }
+    .game-item {
+      width: 300px;
+      height: 300px;
+    }
+    #message {
+      font-size: 72px;
+    }
+    #scoreboard {
+      font-size: 58px;
+    }
+    #reset-game {
+      font-size: 88px;
+      max-width: 780px;
+    }
+    #start-game {
+      width: 720px;
+      font-size: 109px;
+      margin: 46rem auto;
+    }
+    #loading-status{
+      padding-top: 35rem;
+      font-size: 97px;
+    }
+    body {
+        background-repeat: repeat;
+    }
+  }
